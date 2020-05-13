@@ -6,7 +6,7 @@ image: '/services/noun_591323.png'
 Rapid, on-site deployment of viral and antibody tests for COVID19.
 
 - Accurate, regular, reliable COVID-19 tests on per employee basis
-- Integrated dashboard for integrated reporting and analytics
+- Dashboard for integrated reporting and analytics
 - Meticulous record-keeping to meet regulation compliance
 
 > As testing availability opens up in this next phase of the pandemic, the EEOC has confirmed
