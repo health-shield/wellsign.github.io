@@ -11,7 +11,7 @@ We rely on the latest best practices based on published evidence.
 Our consultants are experienced physicians who can help evaluate your space, supplies,
 equipment, and employee logistics to increase health and minimize downtime.
 
-"Emergency planning and decision making has never been more essential in the protection of so
+> "Emergency planning and decision making has never been more essential in the protection of so
 many at one time. Leaders now pressed into being disaster managers need to quickly adapt their
 methods of leadership. With a real threat that the disease will have a second or third wave, we
 need to immediately begin contingency planning while still providing daily operational planning
