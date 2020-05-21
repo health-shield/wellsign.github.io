@@ -14,9 +14,8 @@ retail, food processing, manufacturing, and retail. We offer:
 - Dashboard for integrated reporting and analytics
 - Meticulous record-keeping that meets and exceeds regulation compliance
 
-Lab capacity can be scaled to meet the size of your workforce.
-
-
+Lab capacity can be scaled to meet the size of your workforce. Contact us today for bulk
+pricing.
 
 > As testing availability opens up in this next phase of the pandemic, the EEOC has confirmed
 that employers may require COVID-19 testing as a condition of allowing employees to return to
