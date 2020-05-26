@@ -1,7 +1,7 @@
 ---
 title: 'Jay Feldman'
 image: '/images/team/jay-feldman.jpg'
-jobtitle: 'Chief Medical Officer'
+jobtitle: 'Co-Founder and Chief Medical Officer'
 email: 'consult@healthshieldlogic.com'
 ---
 
