@@ -1,7 +1,7 @@
 ---
 title: 'Arsen Oganesean'
 image: '/images/team/arsen.jpg'
-jobtitle: 'Co-Founder and Chief Financial Officer'
+jobtitle: 'Finance'
 email: 'consult@healthshieldlogic.com'
 
 ---

@@ -5,7 +5,7 @@
   <title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="{{site.baseurl}}/images/favicon.png">
-  <link href="{{site.baseurl}}/assets/css/style.css" rel="stylesheet">
+  <link href="{{site.baseurl}}/public/build/tailwind.css" rel="stylesheet">
   {% seo %}
 
   <!-- Google Tag Manager -->
@@ -17,21 +17,28 @@
   <!-- End Google Tag Manager -->
 
 </head>
-<body class='page {{page.bodyClass}}'>
+<body class='font-sans leading-normal tracking-normal bg-gray-400'>
 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCWTKVT"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  {% include main-menu-mobile.html %}
-  <div id="wrapper" class="wrapper">
-    {% include header.html headerClass='header-extra' %}
-    {{content}}
+  <div>
+      <div class="">
+          {% include banner.html %}
+          {% include header.html %}
+      </div>
+
+      <div>
+          {{content}}
+      </div>
+
+      <div>
+          {% include footer.html %}
+          <script type="text/javascript" src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+      </div>
   </div>
-  {% include footer.html %}
-  {% include sub-footer.html %}
-  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/scripts.js"></script>
   {% include google-analytics.html %}
 </body>
 </html>

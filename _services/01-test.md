@@ -1,5 +1,5 @@
 ---
-title: 'Testing'
+title: 'Test'
 image: '/services/noun_591323.png'
 ---
 

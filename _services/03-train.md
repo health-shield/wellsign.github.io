@@ -1,5 +1,5 @@
 ---
-title: 'Training'
+title: 'Train'
 image: '/services/default.png'
 ---
 
