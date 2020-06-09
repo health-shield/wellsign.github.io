@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="logo.svg"
-   id="svg12"
-   version="1.1"
-   viewBox="0 0 185 48"
+   width="190"
    height="48"
-   width="185">
+   viewBox="0 0 190 48"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
   <metadata
      id="metadata16">
     <rdf:RDF>
@@ -27,28 +27,28 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:lockguides="false"
-     showguides="true"
-     inkscape:document-rotation="0"
-     inkscape:current-layer="svg12"
-     inkscape:window-maximized="0"
-     inkscape:window-y="40"
-     inkscape:window-x="0"
-     inkscape:cy="3.8095885"
-     inkscape:cx="98.618495"
-     inkscape:zoom="5.6375284"
-     showgrid="false"
-     id="namedview14"
-     inkscape:window-height="998"
-     inkscape:window-width="1918"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
-     guidetolerance="10"
-     gridtolerance="10"
-     objecttolerance="10"
-     borderopacity="1"
+     pagecolor="#ffffff"
      bordercolor="#666666"
-     pagecolor="#ffffff" />
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1918"
+     inkscape:window-height="998"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="5.6375284"
+     inkscape:cx="160.32477"
+     inkscape:cy="3.8095885"
+     inkscape:window-x="0"
+     inkscape:window-y="40"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg12"
+     inkscape:document-rotation="0"
+     showguides="true"
+     inkscape:lockguides="false" />
   <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
   <title
      id="title2">logo</title>
@@ -57,116 +57,94 @@
   <defs
      id="defs6">
     <rect
-       id="rect2107"
-       height="67.10701"
-       width="194.52635"
+       x="-6.2959623"
        y="-9.3339529"
-       x="-6.2959623" />
+       width="194.52635"
+       height="67.10701"
+       id="rect2107" />
   </defs>
   <text
-     transform="scale(1.0444891,0.95740588)"
-     id="text55"
-     y="15.722101"
-     x="45.155823"
-     style="font-style:normal;font-weight:normal;font-size:9.35809px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.233952"
-     xml:space="preserve"><tspan
-       id="tspan4318"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:21.3333px;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, weight=280 Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#241c1c;stroke-width:0.233952"
-       y="15.722101"
-       x="45.155823"
-       sodipodi:role="line">Health.Shield.</tspan><tspan
-       id="tspan839"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:21.3333px;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, weight=280 Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#241c1c;stroke-width:0.233952"
-       y="42.388725"
-       x="45.155823"
-       sodipodi:role="line">Logic.</tspan><tspan
-       id="tspan842"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00ffff;stroke-width:0.233952"
-       y="57.199097"
-       x="45.155823"
-       sodipodi:role="line" /></text>
-  <text
-     id="text4353"
-     y="-48.136044"
-     x="4.2678823"
+     xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     xml:space="preserve" />
+     x="4.2678823"
+     y="-48.136044"
+     id="text4353" />
   <text
-     id="text846"
-     y="32.334549"
-     x="26.014668"
+     xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#bc0000;fill-opacity:1;stroke:none"
-     xml:space="preserve"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff5555"
-       y="32.334549"
-       x="26.014668"
+     x="26.014668"
+     y="32.334549"
+     id="text846"><tspan
+       sodipodi:role="line"
        id="tspan844"
-       sodipodi:role="line">)</tspan></text>
+       x="26.014668"
+       y="32.334549"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff5555">)</tspan></text>
   <text
-     id="text943"
-     y="33.239475"
+     xml:space="preserve"
+     style="font-size:40px;line-height:1.25;font-family:GurbaniBoliLite;-inkscape-font-specification:GurbaniBoliLite;letter-spacing:0px;word-spacing:0px"
      x="-0.49304295"
-     style="font-size:40px;line-height:1.25;font-family:GurbaniBoliLite;-inkscape-font-specification:GurbaniBoliLite;letter-spacing:0px;word-spacing:0px"
-     xml:space="preserve"><tspan
-       style="font-size:37.3333px;-inkscape-font-specification:'Comic Sans MS';font-family:'Comic Sans MS';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
-       y="33.239475"
-       x="-0.49304295"
+     y="33.239475"
+     id="text943"><tspan
+       sodipodi:role="line"
        id="tspan941"
-       sodipodi:role="line">⚝</tspan></text>
+       x="-0.49304295"
+       y="33.239475"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS'">⚝</tspan></text>
   <text
-     id="text947"
-     y="-39.160362"
+     xml:space="preserve"
+     style="font-size:40px;line-height:1.25;font-family:GurbaniBoliLite;-inkscape-font-specification:GurbaniBoliLite;letter-spacing:0px;word-spacing:0px"
      x="-17.65653"
-     style="font-size:40px;line-height:1.25;font-family:GurbaniBoliLite;-inkscape-font-specification:GurbaniBoliLite;letter-spacing:0px;word-spacing:0px"
-     xml:space="preserve"><tspan
-       y="-39.160362"
-       x="-17.65653"
+     y="-39.160362"
+     id="text947"><tspan
+       sodipodi:role="line"
        id="tspan945"
-       sodipodi:role="line" /></text>
+       x="-17.65653"
+       y="-39.160362" /></text>
   <text
-     xml:space="preserve"
-     style="font-size:40px;line-height:1.25;font-family:GurbaniBoliLite;-inkscape-font-specification:GurbaniBoliLite;letter-spacing:0px;word-spacing:0px"
-     x="-111.53504"
+     id="text849"
      y="-17.744659"
-     id="text849"><tspan
-       sodipodi:role="line"
-       id="tspan847"
-       x="-111.53504"
-       y="-17.744659" /></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9.35809px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.233952"
-     x="45.155823"
-     y="15.722101"
-     id="text879"
-     transform="scale(1.0444891,0.95740588)"><tspan
-       sodipodi:role="line"
-       x="45.155823"
-       y="15.722101"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:21.3333px;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, weight=280 Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#241c1c;stroke-width:0.233952"
-       id="tspan873">Health.Shield</tspan><tspan
-       sodipodi:role="line"
-       x="45.155823"
-       y="42.388725"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:21.3333px;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, weight=280 Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#241c1c;stroke-width:0.233952"
-       id="tspan875">Logic.</tspan><tspan
-       sodipodi:role="line"
-       x="45.155823"
-       y="57.199097"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00ffff;stroke-width:0.233952"
-       id="tspan877" /></text>
-  <text
-     id="text1506"
-     y="78.28334"
-     x="225.07397"
+     x="-111.53504"
      style="font-size:40px;line-height:1.25;font-family:GurbaniBoliLite;-inkscape-font-specification:GurbaniBoliLite;letter-spacing:0px;word-spacing:0px"
      xml:space="preserve"><tspan
-       y="78.28334"
-       x="225.07397"
-       id="tspan1504"
+       y="-17.744659"
+       x="-111.53504"
+       id="tspan847"
        sodipodi:role="line" /></text>
   <text
-     style="font-size:40px;line-height:1.25;font-family:GurbaniBoliLite;-inkscape-font-specification:GurbaniBoliLite;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2107);"
+     transform="scale(1.0444891,0.95740588)"
+     id="text879"
+     y="15.424219"
+     x="49.898163"
+     style="font-style:normal;font-weight:normal;font-size:9.35809px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.233952"
+     xml:space="preserve"><tspan
+       id="tspan873"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:21.3333px;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, weight=280 Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#241c1c;stroke-width:0.233952"
+       y="15.424219"
+       x="49.898163"
+       sodipodi:role="line">Health.Shield.</tspan><tspan
+       id="tspan875"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:21.3333px;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, weight=280 Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#241c1c;stroke-width:0.233952"
+       y="42.090843"
+       x="49.898163"
+       sodipodi:role="line">Logic.</tspan><tspan
+       id="tspan877"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00ffff;stroke-width:0.233952"
+       y="56.901215"
+       x="49.898163"
+       sodipodi:role="line" /></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;line-height:1.25;font-family:GurbaniBoliLite;-inkscape-font-specification:GurbaniBoliLite;letter-spacing:0px;word-spacing:0px"
+     x="225.07397"
+     y="78.28334"
+     id="text1506"><tspan
+       sodipodi:role="line"
+       id="tspan1504"
+       x="225.07397"
+       y="78.28334" /></text>
+  <text
+     xml:space="preserve"
      id="text2105"
-     xml:space="preserve" />
+     style="font-size:40px;line-height:1.25;font-family:GurbaniBoliLite;-inkscape-font-specification:GurbaniBoliLite;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2107);" />
 </svg>
