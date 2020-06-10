@@ -1,6 +1,7 @@
 ---
 title: 'Monitor'
 image: '/services/default.png'
+permalink: /monitor/
 ---
 
 We are developing technology to monitor employee health, air quality, and surface contamination

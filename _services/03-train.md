@@ -1,6 +1,7 @@
 ---
 title: 'Train'
 image: '/services/default.png'
+permalink: /train/
 ---
 
 Schedule a training session with our health-care professionals. Our workshops cover the
