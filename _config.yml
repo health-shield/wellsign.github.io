@@ -1,7 +1,9 @@
 baseurl: ''
 exclude: ['README.md', 'archive/']
 permalink: pretty
-title: 'Health Shield Logic'
+title: 'Wellsign'
+description: > # this means to ignore newlines until "show_excerpts:"
+  Manage workplace vaccination and testing requirements.
 
 collections:
   services:
@@ -30,3 +32,6 @@ google_analytics_id: UA-167962599-1
 plugins:
   - jekyll-environment-variables
   - jekyll-seo-tag
+  - jekyll-postcss
+
+theme: jekyll-tailwindui
