@@ -1,9 +1,7 @@
 ---
 title: Wellsign
 layout: default
-bodyClass: page-home
 ---
-
 
 {% include header.html %}
 {% include split-hero.html %}

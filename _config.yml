@@ -1,37 +1,6 @@
-baseurl: ''
-exclude: ['README.md', 'archive/']
-permalink: pretty
-title: 'Wellsign'
-description: > # this means to ignore newlines until "show_excerpts:"
-  Manage workplace vaccination and testing requirements.
-
-collections:
-  services:
-    output: true
-    permalink: /services/:path/
-  team:
-    output: true
-    permalink: /team/:path/
-  testimonials:
-    output: true
-    permalink: /testimonials/:path/
-
-defaults:
-  - scope:
-      type: services
-    values:
-      layout: service
-      bodyClass: page-services-single
-  - scope:
-      path: 'images'
-    values:
-      image: true
-
-google_analytics_id: UA-167962599-1
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "" # the name of your site, e.g. ACME Corp.
 
 plugins:
-  - jekyll-environment-variables
-  - jekyll-seo-tag
   - jekyll-postcss
-
-theme: jekyll-tailwindui

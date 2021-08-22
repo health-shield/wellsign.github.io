@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-gem 'jekyll-environment-variables'
-gem 'jekyll-seo-tag'
+
+gem "jekyll", "~> 4.1.1"
 gem 'jekyll-postcss'
-gem "jekyll-tailwindui"
