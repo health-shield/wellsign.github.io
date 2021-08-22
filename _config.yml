@@ -33,3 +33,5 @@ plugins:
   - jekyll-environment-variables
   - jekyll-seo-tag
   - jekyll-postcss
+
+theme: jekyll-tailwindui
