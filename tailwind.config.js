@@ -1,13 +1,16 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './_includes/**/*.html',
+    './_layouts/**/*.html',
+    './_posts/*.md',
+    './*.html',
+  ],
   theme: {
     extend: {},
   },
-  variants: {
-    extend: {},
-  },
+  variants: {},
   plugins: [
-      require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
   ],
 }

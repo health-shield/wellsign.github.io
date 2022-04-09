@@ -4,6 +4,5 @@ permalink: pretty
 title: 'Wellsign'
 destination: docs/
 plugins:
-  - jekyll-environment-variables
   - jekyll-seo-tag
   - jekyll-postcss
