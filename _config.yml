@@ -1,8 +1,18 @@
-baseurl: ''
-exclude: ['README.md', 'archive/']
-permalink: pretty
-title: 'Wellsign'
-destination: docs/
+baseurl: ""
+title: "Wellsign"
+
 plugins:
-  - jekyll-seo-tag
   - jekyll-postcss
+  - jekyll-seo-tag
+
+include: ["node_modules/tailwindcss"]
+
+postcss:
+  cache: false
+
+exclude:
+  - .gitignore
+  - bin
+  - package-lock.json
+  - postcss.config.js
+  - README.md

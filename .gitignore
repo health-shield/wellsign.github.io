@@ -1,6 +1,7 @@
-.sass-cache/
+### Jekyll ###
+_site
+.jekyll-metadata
 .jekyll-cache/
+
+### NPM ###
 node_modules/
-archive/
-token
-_site/

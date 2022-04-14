@@ -1,5 +1,177 @@
-<header class="relative">
-  <div class="bg-white pt-6">
+<header class="z-20 relative bg-white">
+  <div>
+    <div class="relative">
+
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-4 pt-5 sm:px-6 lg:px-8
+          md:justify-start md:space-x-10">
+
+        <div>
+            <img
+              class="h-12 w-auto sm:h-12"
+              src="assets/images/logo.png"
+              alt="Wellsign Logo"
+            />
+        </div>
+        <div class="-mr-2 -my-2 md:hidden">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              @click="isOpen = true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12"
+        >
+          <nav class="flex space-x-6">
+            <a
+              href="app.wellsign.com/plans"
+              class="inline-flex text-base text-lg leading-6 font-normal text-gray-900 hover:text-red-500 focus:outline-none focus:text-red-500 transition ease-in-out duration-150"
+            >
+              Pricing Plans
+            </a>
+            <a 
+              href="https://wellsign.com/insight"
+              class="inline-flex text-base text-lg leading-6 font-normal text-gray-900 hover:text-red-500 focus:outline-none focus:text-red-500 transition ease-in-out duration-150"
+            >
+              Insight
+            </a>
+          </nav>
+          <div class="flex items-center space-x-8">
+            <div class="">
+              <a href="app.wellsign.com/dash"
+                class="inline-flex pr-6 text-base text-lg leading-6 font-normal text-gray-900 hover:text-red-500 focus:outline-none focus:text-red-500 transition ease-in-out duration-150"
+              >
+                Sign in
+              </a>
+              <span class="inline-flex rounded-md shadow-sm">
+                <NuxtLink
+                  to="/register"
+                  class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                >
+                  Free Trial
+                </NuxtLink>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+     Mobile menu, show/hide based on mobile menu state.
+
+     Entering: "duration-200 ease-out"
+       From: "opacity-0 scale-95"
+       To: "opacity-100 scale-100"
+     Leaving: "duration-100 ease-in"
+       From: "opacity-100 scale-100"
+       To: "opacity-0 scale-95"
+   -->
+     <div
+       v-if="isOpen"
+       class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+     >
+       <div class="rounded-lg shadow-lg">
+         <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
+           <div class="md:pt-5 md:pb-6 md:px-5 md:space-y-6">
+             <div class="flex items-center justify-between">
+               <div>
+               </div>
+               <div class="-mr-2">
+                 <button
+                   type="button"
+                   class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                 >
+                   <svg
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     @click="isOpen = false"
+                   >
+                     <path
+                       stroke-linecap="round"
+                       stroke-linejoin="round"
+                       stroke-width="2"
+                       d="M6 18L18 6M6 6l12 12"
+                     />
+                   </svg>
+                 </button>
+               </div>
+             </div>
+           </div>
+           <div class="py-6 px-5 space-y-6">
+             <div 
+              class="grid grid-cols-2 gap-4"
+             >
+               <NuxtLink
+                 v-if="!($auth.loggedIn && $auth.user.role === 'org_member')"
+                 to="/plans"
+                 class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
+                 @click.native="isOpen = false"
+               >
+                 Pricing Plans
+               </NuxtLink>
+             </div>
+             <div class="grid grid-cols-2 gap-4">
+               <a
+                 href="https://wellsign.com/insight"
+                 class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
+                 @click.native="isOpen = false"
+               >
+                 Insight
+               </a>
+             </div>
+             <div class="space-y-6">
+               <span class="w-full flex rounded-md shadow-sm">
+                 <a href="app.wellsign.com/dash"
+                   class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                   @click.native="isOpen = false"
+                 >
+                   Free Trial
+                </a>
+               </span>
+               <p
+                 v-if="$auth.loggedIn"
+                 class="text-center text-base leading-6 font-medium text-gray-500"
+               >
+               </p>
+               <p
+                 v-else
+                 class="text-center text-base leading-6 font-medium text-gray-500"
+               >
+                Existing customer?
+                <NuxtLink
+                  to="/login"
+                  class="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
+                  @click.native="isOpen = false"
+                >
+                  Sign in
+                </NuxtLink>
+               </p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+  </div>
+
+  <!-- OLD MENU
+      <div class="bg-white pt-6">
     <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
       <div class="flex items-center flex-1">
         <div class="flex items-center justify-between w-full md:w-auto">
@@ -10,7 +182,6 @@
           <div class="-mr-2 flex items-center md:hidden">
             <button type="button" class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
-              <!-- Heroicon name: outline/menu -->
               <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -34,7 +205,7 @@
         </a>
       </div>
     </nav>
-  </div>
+      </div> -->
 
   <!--
     Mobile menu, show/hide based on menu open state.
@@ -46,7 +217,7 @@
       From: "opacity-100 scale-100"
       To: "opacity-0 scale-95"
   -->
-  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
+  <!-- <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
     <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
       <div class="px-5 pt-4 flex items-center justify-between">
         <div>
@@ -55,7 +226,6 @@
         <div class="-mr-2">
           <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
             <span class="sr-only">Close menu</span>
-            <!-- Heroicon name: outline/x -->
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -79,5 +249,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </header>
