@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <div class="bg-white pb-8 sm:pb-12 lg:pb-12">
     <div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-26">
         <div class="mx-auto max-w-md px-4 sm:max-w-full sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
@@ -9,7 +13,13 @@
                             What's new
                         </span>
                         <span class="inline-flex items-center text-sm font-medium text-indigo-600 space-x-1">
-                            <span>Just shipped version 0.1.0</span>
+
+                            <span>
+                                {% for post in site.categories.App  limit:1 %}
+                                    {{ post.title}}
+                                {% endfor %}
+                            </span>
+
                             <!-- Heroicon name: solid/chevron-right -->
 
                             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
