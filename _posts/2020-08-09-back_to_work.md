@@ -3,12 +3,16 @@ layout: post
 author: Wellsign
 title: Back to Work, Safely
 categories: COVID-19
-quote: 
+quote: >
+    Maintain distance, wash hands frequently, and wear a mask around other people when
+    possible.
+image: CDC-logo.png
+qsource: Centers for Disease Control and Prevention
 ---
 
 In the event of a positive test result, we hope to provide the information needed to make
 important decisions regarding the readiness of your workforce. The following is based on the
-latest (as of writing this memorandum), official public health recommendations. Please feel
+latest (as of writing this memo), official public health recommendations. Please feel
 free to distribute as you see fit.
 
 > I’m an employee and my results were positive. What should I do?
