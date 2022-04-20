@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <!-- %- seo -% -->
+  <link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon32.png">
+
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+</head>
+
+<body><header class="z-20 relative bg-white">
+  <div>
+    <div class="relative">
+
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-4 pt-5 sm:px-6 lg:px-8
+          md:justify-start md:space-x-10">
+
+        <div>
+            <a href="http://localhost:4000">
+                <img
+                  class="h-12 w-auto sm:h-12"
+                  src="http://localhost:4000/assets/images/logo.png"
+                  alt="Wellsign Logo"
+                />
+            </a>
+        </div>
+        <div class="-mr-2 -my-2 md:hidden">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              @click="isOpen = true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12"
+        >
+          <nav class="flex space-x-6">
+            <a
+              href="https://app.wellsign.com/plans"
+              class="inline-flex text-base text-lg leading-6 font-normal text-gray-900 hover:text-red-500 focus:outline-none focus:text-red-500 transition ease-in-out duration-150"
+            >
+              Pricing Plans
+            </a>
+            <a 
+              href="http://localhost:4000/insight"
+              class="inline-flex text-base text-lg leading-6 font-normal text-gray-900 hover:text-red-500 focus:outline-none focus:text-red-500 transition ease-in-out duration-150"
+            >
+              Insight
+            </a>
+          </nav>
+          <div class="flex items-center space-x-8">
+            <div class="">
+              <a href="app.wellsign.com/dash"
+                class="inline-flex pr-6 text-base text-lg leading-6 font-normal text-gray-900 hover:text-red-500 focus:outline-none focus:text-red-500 transition ease-in-out duration-150"
+              >
+                Sign in
+              </a>
+              <span class="inline-flex rounded-md shadow-sm">
+                <NuxtLink
+                  to="/register"
+                  class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                >
+                  Free Trial
+                </NuxtLink>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+     Mobile menu, show/hide based on mobile menu state.
+
+     Entering: "duration-200 ease-out"
+       From: "opacity-0 scale-95"
+       To: "opacity-100 scale-100"
+     Leaving: "duration-100 ease-in"
+       From: "opacity-100 scale-100"
+       To: "opacity-0 scale-95"
+   -->
+     <div
+       v-if="isOpen"
+       class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+     >
+       <div class="rounded-lg shadow-lg">
+         <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
+           <div class="md:pt-5 md:pb-6 md:px-5 md:space-y-6">
+             <div class="flex items-center justify-between">
+               <div>
+               </div>
+               <div class="-mr-2">
+                 <button
+                   type="button"
+                   class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                 >
+                   <svg
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     @click="isOpen = false"
+                   >
+                     <path
+                       stroke-linecap="round"
+                       stroke-linejoin="round"
+                       stroke-width="2"
+                       d="M6 18L18 6M6 6l12 12"
+                     />
+                   </svg>
+                 </button>
+               </div>
+             </div>
+           </div>
+           <div class="py-6 px-5 space-y-6">
+             <div 
+              class="grid grid-cols-2 gap-4"
+             >
+               <NuxtLink
+                 v-if="!($auth.loggedIn && $auth.user.role === 'org_member')"
+                 to="/plans"
+                 class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
+                 @click.native="isOpen = false"
+               >
+                 Pricing Plans
+               </NuxtLink>
+             </div>
+             <div class="grid grid-cols-2 gap-4">
+               <a
+                 href="https://wellsign.com/insight"
+                 class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
+                 @click.native="isOpen = false"
+               >
+                 Insight
+               </a>
+             </div>
+             <div class="space-y-6">
+               <span class="w-full flex rounded-md shadow-sm">
+                 <a href="app.wellsign.com/dash"
+                   class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                   @click.native="isOpen = false"
+                 >
+                   Free Trial
+                </a>
+               </span>
+               <p
+                 v-if="$auth.loggedIn"
+                 class="text-center text-base leading-6 font-medium text-gray-500"
+               >
+               </p>
+               <p
+                 v-else
+                 class="text-center text-base leading-6 font-medium text-gray-500"
+               >
+                Existing customer?
+                <NuxtLink
+                  to="/login"
+                  class="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
+                  @click.native="isOpen = false"
+                >
+                  Sign in
+                </NuxtLink>
+               </p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+  </div>
+
+  <!-- OLD MENU
+      <div class="bg-white pt-6">
+    <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+      <div class="flex items-center flex-1">
+        <div class="flex items-center justify-between w-full md:w-auto">
+          <a href="#">
+            <span class="sr-only">Workflow</span>
+            <img class="h-8 w-auto sm:h-10" src="/assets/images/logo.png" alt="">
+          </a>
+          <div class="-mr-2 flex items-center md:hidden">
+            <button type="button" class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="hidden space-x-8 md:flex md:ml-10">
+          <a href="#" class="text-base font-medium text-black hover:text-red-500">Product</a>
+
+          <a href="#" class="text-base font-medium text-black hover:text-red-500">Features</a>
+
+          <a href="#" class="text-base font-medium text-black hover:text-red-500">Company</a>
+        </div>
+      </div>
+      <div class="hidden md:flex md:items-center md:space-x-6">
+        <a href="#" class="text-base font-medium text-black hover:text-red-500">
+          Log in
+        </a>
+        <a href="https://app.wellsign.com/register" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">
+          Start free trial
+        </a>
+      </div>
+    </nav>
+      </div> -->
+
+  <!--
+    Mobile menu, show/hide based on menu open state.
+
+    Entering: "duration-150 ease-out"
+      From: "opacity-0 scale-95"
+      To: "opacity-100 scale-100"
+    Leaving: "duration-100 ease-in"
+      From: "opacity-100 scale-100"
+      To: "opacity-0 scale-95"
+  -->
+  <!-- <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
+    <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+      <div class="px-5 pt-4 flex items-center justify-between">
+        <div>
+          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+        </div>
+        <div class="-mr-2">
+          <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="pt-5 pb-6">
+        <div class="px-2 space-y-1">
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Product</a>
+
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Features</a>
+
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Company</a>
+        </div>
+        <div class="mt-6 px-5">
+          <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700">Start free trial</a>
+        </div>
+        <div class="mt-6 px-5">
+          <p class="text-center text-base font-medium text-gray-500">Existing customer? <a
+              href="https://app.wellsign.com/login" class="text-gray-900 hover:underline">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</header>
+<div class="py-16 bg-gray-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
+        <div class="text-base max-w-prose mx-auto lg:max-w-none">
+
+            <span class="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+                COVID-19
+            </span>
+            <span class="text-red-500">  |  </span>
+            <span class="">
+                <code>August 2020</code>
+            </span>
+
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900
+                sm:text-4xl">
+                Back to Work, Safely
+            </p>
+
+        </div>
+
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start">
+          <div class="relative z-10">
+
+            <div class="prose prose-indigo text-gray-500 mx-auto lg:max-w-none">
+
+                <p>In the event of a positive test result, we hope to provide the information needed to make
+important decisions regarding the readiness of your workforce. The following is based on the
+latest (as of writing this memo), official public health recommendations. Please feel
+free to distribute as you see fit.</p>
+
+<blockquote>
+  <p>I’m an employee and my results were positive. What should I do?</p>
+</blockquote>
+
+<ul>
+  <li>Most cases of COVID-19 are <a href="https://web.archive.org/web/20200702021748/https://www.uptodate.com/contents/coronavirus-disease-2019-covid-19-clinical-features">mild</a>.</li>
+  <li>Even if you are not experiencing any symptoms, consult your primary care physician as soon as
+possible.</li>
+  <li>Monitor your symptoms. If you have: trouble breathing, persistent pain or pressure in the
+chest, new confusion, inability to wake or stay awake, or bluish lips or face—<a href="https://web.archive.org/web/20200314183946/https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">seek emergency
+medical care immediately</a>. More common symptoms include shortness of breath,
+fatigue, fever, cough, and diarrhea.</li>
+  <li>Maintain distance, wash hands frequently, and wear a mask around other people when possible.</li>
+  <li>Get well soon, at home, until it’s safe for you to work around others.</li>
+</ul>
+
+<blockquote>
+  <p>When can I get back to work?</p>
+</blockquote>
+
+<p>Employees may consider returning to work according to the <a href="https://web.archive.org/web/20211002075126/https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-risk-assesment-hcp.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fhcp%2Freturn-to-work.html">following criteria</a>:</p>
+
+<ul>
+  <li><strong>Healthy individuals</strong> who tested positive <strong>without symptoms</strong> throughout their infection may
+return to work when at least 10 days have passed since the date of their first positive viral
+diagnostic test.</li>
+  <li>
+    <p>People who experienced <strong>mild to moderate illness, and who are NOT severely
+immunocompromised</strong> may return to work if the following 3 criteria are met:</p>
+
+    <ul>
+      <li>At least 10 days have passed since symptoms <em>first appeared</em> AND</li>
+      <li>At least 24 hours have passed <strong>since last fever</strong> without the use of fever-reducing
+medications and</li>
+      <li>Symptoms (e.g., cough, shortness of breath) have improved.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Those at risk and those whose illness was acute should consult their treating physician before
+returning to work.</p>
+
+<p>The above guidelines should not take the place of proper medical care. Your primary care
+physician will help assess your ability to return to work in the context of your own medical
+history.</p>
+
+<blockquote>
+  <p>I am the employer, and one of my employees tested positive or displays symptoms.</p>
+</blockquote>
+
+<ul>
+  <li>In the case of sick or symptomatic employees, it would be best to separate them from further
+contact with others by sending them home. Employees who develop symptoms outside of work should
+notify their supervisor.</li>
+  <li>Limit access and, if possible, wait at least 24hr to decontaminate any contaminated workspaces,
+to avoid the risk of exposure.</li>
+  <li>Minimize risk by managing prolonged exposure. Less than 6 feet and more than 15 minutes
+indicates heightened social distancing and, preferably, a home quarantine. More on the
+specific CDC recommendations <a href="https://web.archive.org/web/20200331035932/https://www.cdc.gov/coronavirus/2019-ncov/php/public-health-recommendations.html">here</a> and <a href="https://web.archive.org/web/20200422155503/https://www.cdc.gov/coronavirus/2019-ncov/community/general-business-faq.html">here</a>.
+Local health officials may be able to help with contact tracing when needed.</li>
+  <li>Communicate the availability of health resources such as <a href="https://www.osha.gov/Publications/OSHA3990.pdf&gt;">testing and telemedicine</a>.</li>
+</ul>
+
+
+
+            </div>
+            <div class="mt-10 flex text-base max-w-prose mx-auto lg:max-w-none">
+              <div class="rounded-md shadow">
+                <a href="#" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"> Contact sales </a>
+              </div>
+
+              <!-- <div class="rounded-md shadow ml-4">
+                <a href="#" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"> Learn more </a>
+              </div>-->
+
+            </div>
+          </div>
+          <div class="mt-12 relative text-base max-w-prose mx-auto lg:mt-0 lg:max-w-none">
+            <svg class="absolute top-0 right-0 -mt-20 -mr-20 lg:top-auto lg:right-auto lg:bottom-1/2 lg:left-1/2 lg:mt-0 lg:mr-0 xl:top-0 xl:right-0 xl:-mt-20 xl:-mr-20" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+              <defs>
+                <pattern id="bedc54bc-7371-44a2-a2bc-dc68d819ae60" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width="404" height="384" fill="url(#bedc54bc-7371-44a2-a2bc-dc68d819ae60)" />
+            </svg>
+            <blockquote class="relative bg-white rounded-lg shadow-lg">
+              <div class="rounded-t-lg px-6 py-8 sm:px-10 sm:pt-10 sm:pb-8">
+                <!-- <img
+                    src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg"
+                    alt="Workcation" class="h-8">-->
+                <div class="relative text-lg text-gray-700 font-medium mt-8">
+                  <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                  </svg>
+
+                  <p class="relative">
+                      Maintain distance, wash hands frequently, and wear a mask around other people when possible.
+
+                  </p>
+
+                </div>
+              </div>
+              <cite class="relative flex items-center sm:items-start bg-indigo-600 rounded-b-lg not-italic py-5 px-6 sm:py-5 sm:pl-12 sm:pr-10 sm:mt-10">
+                <div class="relative rounded-full border-2 border-white sm:absolute sm:top-0 sm:transform sm:-translate-y-1/2">
+
+                    <img class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-indigo-300"
+                         src="http://localhost:4000/assets/images/CDC-logo.png" alt="">
+
+                </div>
+                <span class="relative ml-4 text-indigo-300 font-semibold leading-6 sm:ml-24 sm:pl-1">
+                    <p class="text-white font-semibold sm:inline"> Centers for Disease Control and Prevention </p>
+                      <!-- <p class="sm:inline">
+                          Centers for Disease Control and Prevention
+                      </p>-->
+                </span>
+              </cite>
+            </blockquote>
+          </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-white">
+  <div class="px-4 py-8 mx-auto overflow-hidden max-w-screen-xl sm:px-6 lg:px-8">
+    <div class="mt-8">
+      <p class="font-mono text-base text-center text-gray-400 leading-6">
+      Wellsign 2022 
+      <span class="text-red-300"> ⚝  </span>
+      Made with care in Albuquerque, New Mexico
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 baseurl: ""
 title: "Wellsign"
+destination: docs/
 
 plugins:
   - jekyll-postcss
