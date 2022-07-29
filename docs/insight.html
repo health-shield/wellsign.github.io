@@ -2,7 +2,7 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- %- seo -% -->
   <link rel="icon" type="image/png" href="https://wellsign.com/assets/images/favicon32.png">
 
@@ -31,11 +31,10 @@
             class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
           >
             <svg
-              class="h-6 w-6"
+              class="h-6 w-6 opener"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              @click="isOpen = true"
             >
               <path
                 stroke-linecap="round"
@@ -114,8 +113,8 @@
        To: "opacity-0 scale-95"
    -->
      <div
-       v-if="isOpen"
-       class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+       id="mobileMenu"
+       class="hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
      >
        <div class="rounded-lg shadow-lg">
          <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
@@ -129,11 +128,10 @@
                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                  >
                    <svg
-                     class="h-6 w-6"
+                     class="h-6 w-6 closer"
                      fill="none"
                      viewBox="0 0 24 24"
                      stroke="currentColor"
-                     @click="isOpen = false"
                    >
                      <path
                        stroke-linecap="round"
@@ -150,29 +148,25 @@
              <div 
               class="grid grid-cols-2 gap-4"
              >
-               <NuxtLink
-                 v-if="!($auth.loggedIn && $auth.user.role === 'org_member')"
-                 to="/plans"
-                 class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                 @click.native="isOpen = false"
+               <a
+                 href="https://app.wellsign.com/plans"
+                 class="closer rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                >
                  Pricing Plans
-               </NuxtLink>
+               </a>
              </div>
              <div class="grid grid-cols-2 gap-4">
                <a
                  href="https://wellsign.com/insight"
-                 class="rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                 @click.native="isOpen = false"
+                 class="closer rounded-md text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                >
                  Insight
                </a>
              </div>
              <div class="space-y-6">
                <span class="w-full flex rounded-md shadow-sm">
-                 <a href="app.wellsign.com/dash"
-                   class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
-                   @click.native="isOpen = false"
+                 <a href="https://app.wellsign.com/register"
+                   class="closer w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
                  >
                    Free Trial
                 </a>
@@ -187,13 +181,12 @@
                  class="text-center text-base leading-6 font-medium text-gray-500"
                >
                 Existing customer?
-                <NuxtLink
-                  to="/login"
-                  class="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
-                  @click.native="isOpen = false"
+                <a
+                  href="https://app.wellsign.com/dash"
+                  class="closer text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
                 >
                   Sign in
-                </NuxtLink>
+                </a>
                </p>
              </div>
            </div>
@@ -283,6 +276,20 @@
     </div>
   </div> -->
 </header>
+
+<script>
+  let openEl = document.querySelector('.opener')
+  let closeEl = document.querySelector('.closer')
+  let mobileMenu = document.getElementById('mobileMenu')
+
+  openEl.addEventListener('click', (event) => {
+    mobileMenu.style.display = 'block'
+  })
+
+  closeEl.addEventListener('click', (event) => {
+    mobileMenu.style.display = 'none'
+  })
+</script>
 <div class="bg-white pt-10 pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8">
     <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
 
